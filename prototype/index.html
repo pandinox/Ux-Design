@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFlow — prototyp aplikacji magazynowej</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+
+    <!-- LOGIN -->
+    <section class="screen active" id="login">
+      <div class="login-screen">
+        <div class="brand-mark">SF</div>
+        <h1>StockFlow</h1>
+        <p class="muted center">Mobilny system obsługi magazynu dla małych firm i sklepów internetowych.</p>
+
+        <label>
+          Login
+          <input type="text" value="magazynier@firma.pl" />
+        </label>
+
+        <label>
+          Hasło
+          <input type="password" value="password" />
+        </label>
+
+        <button class="btn primary full" data-go="dashboard">Zaloguj</button>
+        <p class="hint">Prototyp UI/UX — dane demonstracyjne</p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="screen" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Dzień dobry</p>
+          <h2>Magazyn główny</h2>
+        </div>
+        <button class="icon-btn" data-go="settings">⚙</button>
+      </header>
+
+      <div class="grid-2">
+        <article class="stat-card">
+          <span>Produkty</span>
+          <strong>1542</strong>
+        </article>
+        <article class="stat-card warning">
+          <span>Niski stan</span>
+          <strong>23</strong>
+        </article>
+        <article class="stat-card success">
+          <span>Przyjęcia dziś</span>
+          <strong>104</strong>
+        </article>
+        <article class="stat-card danger">
+          <span>Wydania dziś</span>
+          <strong>71</strong>
+        </article>
+      </div>
+
+      <section class="panel">
+        <div class="section-title">
+          <h3>Ostatnie operacje</h3>
+          <button class="text-btn" data-go="reports">Raport</button>
+        </div>
+
+        <div class="activity plus">
+          <div>
+            <strong>Organizer biurowy ALFA</strong>
+            <span>Przyjęcie dostawy</span>
+          </div>
+          <b>+50</b>
+        </div>
+
+        <div class="activity minus">
+          <div>
+            <strong>Zestaw kluczy TORX</strong>
+            <span>Wydanie zamówienia</span>
+          </div>
+          <b>-3</b>
+        </div>
+
+        <div class="activity plus">
+          <div>
+            <strong>Taśma montażowa PRO</strong>
+            <span>Korekta stanu</span>
+          </div>
+          <b>+12</b>
+        </div>
+      </section>
+
+      <button class="floating-scan" data-go="scanner">Skanuj kod</button>
+      <nav class="bottom-nav">
+        <button class="active" data-go="dashboard">⌂<span>Start</span></button>
+        <button data-go="products">▤<span>Produkty</span></button>
+        <button data-go="scanner">◎<span>Skaner</span></button>
+        <button data-go="reports">◷<span>Raporty</span></button>
+      </nav>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="screen" id="products">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Lista magazynowa</p>
+          <h2>Produkty</h2>
+        </div>
+        <button class="icon-btn" data-go="add-product">＋</button>
+      </header>
+
+      <div class="search-box">🔍 <input placeholder="Szukaj po nazwie, SKU lub EAN" /></div>
+
+      <div class="chips">
+        <button class="chip active">Wszystkie</button>
+        <button class="chip">Niski stan</button>
+        <button class="chip">Braki</button>
+      </div>
+
+      <div class="product-list">
+        <article class="product-card" data-go="product-details">
+          <div>
+            <strong>Organizer biurowy ALFA</strong>
+            <span>ORG-ALF-01 · A-12-03</span>
+          </div>
+          <b>127 szt.</b>
+        </article>
+
+        <article class="product-card" data-go="product-details">
+          <div>
+            <strong>Latarka warsztatowa NOVA</strong>
+            <span>LAT-NOV-02 · A-12-01</span>
+          </div>
+          <b>54 szt.</b>
+        </article>
+
+        <article class="product-card low" data-go="product-details">
+          <div>
+            <strong>Zestaw kluczy TORX</strong>
+            <span>KL-TORX-01 · B-04-02</span>
+          </div>
+          <b>8 szt.</b>
+        </article>
+
+        <article class="product-card" data-go="product-details">
+          <div>
+            <strong>Taśma montażowa PRO</strong>
+            <span>TAS-PRO-02 · C-01-04</span>
+          </div>
+          <b>310 szt.</b>
+        </article>
+      </div>
+
+      <nav class="bottom-nav">
+        <button data-go="dashboard">⌂<span>Start</span></button>
+        <button class="active" data-go="products">▤<span>Produkty</span></button>
+        <button data-go="scanner">◎<span>Skaner</span></button>
+        <button data-go="reports">◷<span>Raporty</span></button>
+      </nav>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="screen" id="product-details">
+      <header class="topbar">
+        <button class="icon-btn" data-go="products">‹</button>
+        <div>
+          <p class="eyebrow">Szczegóły produktu</p>
+          <h2>Organizer biurowy ALFA</h2>
+        </div>
+      </header>
+
+      <section class="hero-card">
+        <div class="product-icon">📦</div>
+        <h3>Organizer biurowy ALFA</h3>
+        <p>Stan aktualny</p>
+        <strong>127 szt.</strong>
+      </section>
+
+      <section class="panel">
+        <div class="detail-row"><span>SKU</span><strong>ORG-ALF-01</strong></div>
+        <div class="detail-row"><span>EAN</span><strong>5904827391046</strong></div>
+        <div class="detail-row"><span>Lokalizacja</span><strong>A-12-03</strong></div>
+        <div class="detail-row"><span>Minimalny stan</span><strong>20 szt.</strong></div>
+      </section>
+
+      <div class="actions-grid">
+        <button class="btn success" data-go="stock-in">Przyjęcie</button>
+        <button class="btn danger" data-go="stock-out">Wydanie</button>
+        <button class="btn secondary" data-go="add-product">Edytuj</button>
+      </div>
+    </section>
+
+    <!-- ADD / EDIT PRODUCT -->
+    <section class="screen" id="add-product">
+      <header class="topbar">
+        <button class="icon-btn" data-go="products">‹</button>
+        <div>
+          <p class="eyebrow">Formularz</p>
+          <h2>Dodaj produkt</h2>
+        </div>
+      </header>
+
+      <section class="panel form-panel">
+        <label>Nazwa produktu<input value="Pojemnik magazynowy 12L" /></label>
+        <label>SKU<input value="POJ-12L-03" /></label>
+        <label>EAN<input value="5907316284950" /></label>
+        <label>Lokalizacja<input value="A-13-01" /></label>
+        <label>Ilość początkowa<input type="number" value="24" /></label>
+      </section>
+
+      <button class="btn primary full" data-toast="Produkt został zapisany" data-go="products">Zapisz produkt</button>
+    </section>
+
+    <!-- SCANNER -->
+    <section class="screen" id="scanner">
+      <header class="topbar">
+        <button class="icon-btn" data-go="dashboard">‹</button>
+        <div>
+          <p class="eyebrow">Szybka operacja</p>
+          <h2>Skaner kodów</h2>
+        </div>
+      </header>
+
+      <section class="scanner-box">
+        <div class="scanner-frame">
+          <span></span><span></span><span></span><span></span>
+          <div class="scan-line"></div>
+        </div>
+        <p>Zeskanuj kod EAN produktu</p>
+      </section>
+
+      <button class="btn primary full" data-go="scan-result">Symuluj skanowanie</button>
+    </section>
+
+    <!-- SCAN RESULT -->
+    <section class="screen" id="scan-result">
+      <header class="topbar">
+        <button class="icon-btn" data-go="scanner">‹</button>
+        <div>
+          <p class="eyebrow">Produkt znaleziony</p>
+          <h2>Wynik skanowania</h2>
+        </div>
+      </header>
+
+      <section class="hero-card">
+        <div class="product-icon">📦</div>
+        <h3>Organizer biurowy ALFA</h3>
+        <p>ORG-ALF-01 · A-12-03</p>
+        <strong>127 szt.</strong>
+      </section>
+
+      <div class="actions-grid">
+        <button class="btn success" data-go="stock-in">Przyjęcie</button>
+        <button class="btn danger" data-go="stock-out">Wydanie</button>
+      </div>
+
+      <button class="btn secondary full" data-go="product-details">Przejdź do karty produktu</button>
+    </section>
+
+    <!-- STOCK IN -->
+    <section class="screen" id="stock-in">
+      <header class="topbar">
+        <button class="icon-btn" data-go="product-details">‹</button>
+        <div>
+          <p class="eyebrow">Operacja magazynowa</p>
+          <h2>Przyjęcie towaru</h2>
+        </div>
+      </header>
+
+      <section class="panel form-panel">
+        <label>Produkt<input value="Organizer biurowy ALFA" /></label>
+        <label>Ilość<input type="number" value="50" /></label>
+        <label>Dokument / uwagi<input value="Dostawa magazynowa 11.06.2026" /></label>
+      </section>
+
+      <div class="summary-card">
+        <span>Stan po operacji</span>
+        <strong>177 szt.</strong>
+      </div>
+
+      <button class="btn success full" data-toast="Przyjęcie zapisane" data-go="dashboard">Zapisz przyjęcie</button>
+    </section>
+
+    <!-- STOCK OUT -->
+    <section class="screen" id="stock-out">
+      <header class="topbar">
+        <button class="icon-btn" data-go="product-details">‹</button>
+        <div>
+          <p class="eyebrow">Operacja magazynowa</p>
+          <h2>Wydanie towaru</h2>
+        </div>
+      </header>
+
+      <section class="panel form-panel">
+        <label>Produkt<input value="Organizer biurowy ALFA" /></label>
+        <label>Ilość<input type="number" value="3" /></label>
+        <label>Dokument / uwagi<input value="Zamówienie #ZAM-2026-104" /></label>
+      </section>
+
+      <div class="summary-card danger-soft">
+        <span>Stan po operacji</span>
+        <strong>124 szt.</strong>
+      </div>
+
+      <button class="btn danger full" data-toast="Wydanie zapisane" data-go="dashboard">Zapisz wydanie</button>
+    </section>
+
+    <!-- REPORTS -->
+    <section class="screen" id="reports">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Analiza</p>
+          <h2>Raporty</h2>
+        </div>
+        <button class="icon-btn" data-go="dashboard">⌂</button>
+      </header>
+
+      <section class="panel">
+        <div class="section-title">
+          <h3>Ruch magazynowy</h3>
+          <span class="muted">7 dni</span>
+        </div>
+        <div class="bar-chart">
+          <span style="height: 40%"></span>
+          <span style="height: 70%"></span>
+          <span style="height: 45%"></span>
+          <span style="height: 85%"></span>
+          <span style="height: 55%"></span>
+          <span style="height: 65%"></span>
+          <span style="height: 90%"></span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Produkty wymagające uzupełnienia</h3>
+        <div class="activity minus"><div><strong>Zestaw kluczy TORX</strong><span>Poniżej minimum</span></div><b>8</b></div>
+        <div class="activity minus"><div><strong>Rękawice robocze</strong><span>Poniżej minimum</span></div><b>5</b></div>
+      </section>
+
+      <button class="btn primary full" data-toast="Raport PDF wygenerowany">Eksportuj raport PDF</button>
+
+      <nav class="bottom-nav">
+        <button data-go="dashboard">⌂<span>Start</span></button>
+        <button data-go="products">▤<span>Produkty</span></button>
+        <button data-go="scanner">◎<span>Skaner</span></button>
+        <button class="active" data-go="reports">◷<span>Raporty</span></button>
+      </nav>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="screen" id="settings">
+      <header class="topbar">
+        <button class="icon-btn" data-go="dashboard">‹</button>
+        <div>
+          <p class="eyebrow">Konfiguracja</p>
+          <h2>Ustawienia</h2>
+        </div>
+      </header>
+
+      <section class="panel settings-list">
+        <button>Eksport danych do Excel <span>›</span></button>
+        <button>Szablon raportu PDF <span>›</span></button>
+        <button>Synchronizacja z Google Sheets <span>Włączona</span></button>
+        <button>Tryb ciemny <span>Wyłączony</span></button>
+      </section>
+
+      <section class="panel ux-note">
+        <h3>Założenia UX</h3>
+        <p>Najczęstsze akcje magazynowe są dostępne w maksymalnie 2 kliknięciach. Interfejs jest przystosowany do obsługi jedną ręką podczas pracy między regałami.</p>
+      </section>
+
+      <button class="btn secondary full" data-go="login">Wyloguj</button>
+    </section>
+
+    <div class="toast" id="toast"></div>
+  </main>
+
+  <aside class="project-info">
+    <h1>StockFlow</h1>
+    <p>Klikany prototyp aplikacji magazynowej przygotowany jako projekt UI/UX.</p>
+    <ul>
+      <li>Minimum 5 widoków: spełnione</li>
+      <li>Prototyp połączony klikami: spełnione</li>
+      <li>Mobile First: spełnione</li>
+      <li>Dobre praktyki UX: dolna nawigacja, duże przyciski, krótkie ścieżki użytkownika</li>
+    </ul>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

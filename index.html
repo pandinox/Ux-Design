@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFlow — projekt UX/UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">SF</div>
+      <div>
+        <a href="#screens">Widoki</a>
+        <a href="#flow">Przepływ</a>
+        <a href="#ux">UX</a>
+      </div>
+    </nav>
+
+    <section class="hero-grid">
+      <div>
+        <p class="eyebrow">Projekt UI/UX aplikacji mobilnej</p>
+        <h1>StockFlow</h1>
+        <p class="lead">
+          Interaktywny projekt aplikacji magazynowej dla małych firm. 
+          Prototyp został przygotowany w podejściu Mobile First i pokazuje główne ścieżki użytkownika:
+          wyszukiwanie produktu, skanowanie kodu, przyjęcie i wydanie towaru oraz raportowanie.
+        </p>
+
+        <div class="badges">
+          <span>Mobile First</span>
+          <span>11 widoków</span>
+          <span>Prototyp klikany</span>
+          <span>Dobre praktyki UX</span>
+        </div>
+
+        <div class="buttons">
+          <a class="btn primary" href="#screens">Zobacz widoki</a>
+          <a class="btn secondary" href="prototype/index.html">Otwórz prototyp mobilny</a>
+        </div>
+      </div>
+
+      <div class="hero-phone">
+        <div class="phone-frame mini">
+          <div class="phone-content dashboard-mini">
+            <p>Dzień dobry</p>
+            <h3>Magazyn główny</h3>
+            <div class="mini-grid">
+              <span><b>1542</b> Produkty</span>
+              <span><b>23</b> Niski stan</span>
+              <span><b>104</b> Przyjęcia</span>
+              <span><b>71</b> Wydania</span>
+            </div>
+            <div class="mini-card"></div>
+            <div class="mini-card short"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section" id="screens">
+      <div class="section-head">
+        <p class="eyebrow">Makiety ekranów</p>
+        <h2>Widoki aplikacji</h2>
+        <p>
+          Poniżej przedstawiono wszystkie ekrany prototypu w formie podobnej do tablicy projektowej UI.
+          Każda ramka odpowiada osobnemu widokowi aplikacji mobilnej.
+        </p>
+      </div>
+
+      <div class="screens-board">
+        <article class="screen-card">
+          <span class="screen-number">01</span>
+          <div class="phone-frame">
+            <div class="mock-screen login-mock">
+              <div class="mark">SF</div>
+              <h3>StockFlow</h3>
+              <p>Mobilny system obsługi magazynu</p>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="mock-btn"></div>
+            </div>
+          </div>
+          <h3>Logowanie</h3>
+          <p>Prosty start z jasnym komunikatem, czym jest aplikacja.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">02</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Dzień dobry</p>
+              <h3>Magazyn główny</h3>
+              <div class="stats">
+                <span><b>1542</b>Produkty</span>
+                <span><b>23</b>Niski stan</span>
+                <span><b>104</b>Przyjęcia</span>
+                <span><b>71</b>Wydania</span>
+              </div>
+              <div class="list-line"></div>
+              <div class="list-line"></div>
+              <div class="bottom-nav"></div>
+            </div>
+          </div>
+          <h3>Dashboard</h3>
+          <p>Najważniejsze informacje magazynowe widoczne od razu po wejściu.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">03</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Lista magazynowa</p>
+              <h3>Produkty</h3>
+              <div class="search"></div>
+              <div class="chips"></div>
+              <div class="product-row"><b>Organizer biurowy ALFA</b><span>127 szt.</span></div>
+              <div class="product-row"><b>Latarka warsztatowa NOVA</b><span>54 szt.</span></div>
+              <div class="product-row warning"><b>Zestaw kluczy TORX</b><span>8 szt.</span></div>
+              <div class="bottom-nav"></div>
+            </div>
+          </div>
+          <h3>Lista produktów</h3>
+          <p>Wyszukiwarka i filtry pomagają szybko znaleźć produkt.</p>
+        </article>
+
+        <article class="screen-card">
+          <span class="screen-number">04</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Szczegóły produktu</p>
+              <h3>Organizer biurowy ALFA</h3>
+              <div class="big-icon">📦</div>
+              <div class="stock">127 szt.</div>
+              <div class="details"></div>
+              <div class="two-buttons"></div>
+            </div>
+          </div>
+          <h3>Szczegóły produktu</h3>
+          <p>Pełne dane produktu i szybkie akcje magazynowe.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">05</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Formularz</p>
+              <h3>Dodaj produkt</h3>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="mock-btn"></div>
+            </div>
+          </div>
+          <h3>Dodawanie produktu</h3>
+          <p>Formularz zawiera tylko najważniejsze pola wymagane do obsługi magazynu.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">06</span>
+          <div class="phone-frame">
+            <div class="mock-screen dark">
+              <p class="tiny">Szybka operacja</p>
+              <h3>Skaner kodów</h3>
+              <div class="scan-box">
+                <div class="scan-line"></div>
+              </div>
+              <p>Zeskanuj kod EAN produktu</p>
+            </div>
+          </div>
+          <h3>Skaner kodów</h3>
+          <p>Szybka ścieżka dla magazyniera pracującego między regałami.</p>
+        </article>
+
+        <article class="screen-card">
+          <span class="screen-number">07</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Produkt znaleziony</p>
+              <h3>Wynik skanowania</h3>
+              <div class="big-icon">📦</div>
+              <div class="stock">127 szt.</div>
+              <div class="two-buttons"></div>
+              <div class="mock-btn secondary-line"></div>
+            </div>
+          </div>
+          <h3>Wynik skanowania</h3>
+          <p>Po skanie użytkownik może od razu wykonać przyjęcie lub wydanie.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">08</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Operacja magazynowa</p>
+              <h3>Przyjęcie towaru</h3>
+              <div class="input"></div>
+              <div class="input short"></div>
+              <div class="input"></div>
+              <div class="summary good">177 szt.</div>
+              <div class="mock-btn green"></div>
+            </div>
+          </div>
+          <h3>Przyjęcie</h3>
+          <p>Użytkownik widzi przewidywany stan po operacji przed zapisem.</p>
+        </article>
+
+        <article class="screen-card arrow-after">
+          <span class="screen-number">09</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Operacja magazynowa</p>
+              <h3>Wydanie towaru</h3>
+              <div class="input"></div>
+              <div class="input short"></div>
+              <div class="input"></div>
+              <div class="summary bad">124 szt.</div>
+              <div class="mock-btn red"></div>
+            </div>
+          </div>
+          <h3>Wydanie</h3>
+          <p>Kolor ostrzegawczy zmniejsza ryzyko pomylenia wydania z przyjęciem.</p>
+        </article>
+
+        <article class="screen-card">
+          <span class="screen-number">10</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Analiza</p>
+              <h3>Raporty</h3>
+              <div class="chart">
+                <span style="height:40%"></span>
+                <span style="height:70%"></span>
+                <span style="height:45%"></span>
+                <span style="height:85%"></span>
+                <span style="height:55%"></span>
+              </div>
+              <div class="list-line"></div>
+              <div class="list-line"></div>
+              <div class="bottom-nav"></div>
+            </div>
+          </div>
+          <h3>Raporty</h3>
+          <p>Podsumowanie stanów i produktów wymagających uzupełnienia.</p>
+        </article>
+
+        <article class="screen-card">
+          <span class="screen-number">11</span>
+          <div class="phone-frame">
+            <div class="mock-screen">
+              <p class="tiny">Konfiguracja</p>
+              <h3>Ustawienia</h3>
+              <div class="settings-row"></div>
+              <div class="settings-row"></div>
+              <div class="settings-row"></div>
+              <div class="note-box"></div>
+              <div class="mock-btn secondary-line"></div>
+            </div>
+          </div>
+          <h3>Ustawienia</h3>
+          <p>Eksport danych, synchronizacja i krótki opis założeń UX.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section flow" id="flow">
+      <div class="section-head">
+        <p class="eyebrow">Prototyp</p>
+        <h2>Główne przepływy użytkownika</h2>
+      </div>
+
+      <div class="flow-grid">
+        <article>
+          <span>01</span>
+          <h3>Logowanie → Dashboard</h3>
+          <p>Użytkownik po zalogowaniu widzi stan magazynu oraz ostatnie operacje.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Dashboard → Produkty → Szczegóły</h3>
+          <p>Ścieżka umożliwia szybkie znalezienie produktu i sprawdzenie jego stanu.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Skaner → Wynik → Przyjęcie/Wydanie</h3>
+          <p>Najkrótsza ścieżka dla pracy fizycznej w magazynie.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Raporty → Eksport PDF</h3>
+          <p>Raport pozwala szybko ocenić produkty wymagające uzupełnienia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section ux" id="ux">
+      <div class="section-head">
+        <p class="eyebrow">Dobre praktyki UX</p>
+        <h2>Uzasadnienie decyzji projektowych</h2>
+      </div>
+
+      <div class="ux-grid">
+        <article>
+          <h3>Mobile First</h3>
+          <p>Aplikacja została zaprojektowana z myślą o pracy w magazynie, gdzie użytkownik korzysta z telefonu podczas przemieszczania się między regałami.</p>
+        </article>
+
+        <article>
+          <h3>Krótka ścieżka działania</h3>
+          <p>Operacje magazynowe można wykonać w maksymalnie kilku kliknięciach: skan produktu, wybór operacji, zapis.</p>
+        </article>
+
+        <article>
+          <h3>Duże przyciski</h3>
+          <p>Najważniejsze elementy interaktywne mają dużą powierzchnię kliknięcia, co ułatwia obsługę jedną ręką.</p>
+        </article>
+
+        <article>
+          <h3>Kolory funkcjonalne</h3>
+          <p>Zieleń oznacza przyjęcie lub sukces, czerwień wydanie albo ostrzeżenie, a niebieski służy do akcji głównych.</p>
+        </article>
+
+        <article>
+          <h3>Stała nawigacja</h3>
+          <p>Dolne menu zapewnia szybki dostęp do najważniejszych sekcji: start, produkty, skaner i raporty.</p>
+        </article>
+
+        <article>
+          <h3>Informacja zwrotna</h3>
+          <p>Po zapisie operacji użytkownik otrzymuje komunikat potwierdzający wykonanie akcji.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>StockFlow</strong>
+    <span>Projekt edukacyjny UI/UX — prototyp aplikacji mobilnej</span>
+  </footer>
+</body>
+</html>
