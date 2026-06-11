@@ -10,12 +10,3 @@ To jest druga wersja projektu: prezentacyjna tablica UI/UX, wyglądająca podobn
 - uzasadnienie decyzji UX,
 - link do klikanego prototypu mobilnego w folderze `prototype`.
 
-## Jak uruchomić
-
-Otwórz `index.html` w przeglądarce albo wrzuć cały folder na GitHub Pages.
-
-## Struktura
-
-- `index.html` — strona showcase projektu UX/UI,
-- `style.css` — style showcase,
-- `prototype/` — działający prototyp mobilny.
